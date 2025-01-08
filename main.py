@@ -1,6 +1,9 @@
 file = "books/frankenstein.txt"
+
+
 def count_words(content):
     return len(content.split())
+
 
 def count_chars(content):
     chars = list(content.lower())
@@ -12,14 +15,17 @@ def count_chars(content):
             charcount[char] = 1
     return charcount
 
+
 def sorthelper(dict):
     sortable = []
     for k in dict:
         sortable.append({"character": k, "sum": dict[k]})
     return sortable
 
+
 def sort_on(dict):
     return dict["sum"]
+
 
 def report(charcount):
     print(f"--- Begin report of {file} ---")
